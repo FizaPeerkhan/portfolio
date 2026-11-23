@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fiza Peerkhan. Final-year CSE (Data Science) student. Data analysis, machine learning, Python, SQL, Power BI, Excel, Flask/Django. Graduating 2027; open to internships and full-time Data Analyst / Data Science roles.">
+<title>Fiza Peerkhan | Data Analyst &amp; Data Science Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#0B1B2E;--navy:#10243A;--teal:#159A9C;--mint:#7FE0D6;--plum:#6B4A6B;--amber:#E0A04A;--cream:#FBF7EE;--paper:#fff;--text:#253247;--muted:#51627a;--line:#E4E8EE;--ease:cubic-bezier(.2,.7,.2,1)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:900;margin-bottom:.7rem}
+h3{font-size:1.25rem;font-weight:700}
+section{padding:5.5rem 0}
+.sub{color:var(--muted);font-size:1.1rem;max-width:60ch;margin-bottom:2.6rem}
+.dark{background:var(--ink)}.dark h2,.dark h3{color:#fff}.dark .sub{color:#B8C9D8}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(11,27,46,.9);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:Fraunces,serif;font-weight:900;font-size:1.45rem;color:#fff}.brand b{color:var(--amber)}
+.links{display:flex;gap:1.4rem;align-items:center;font-size:.87rem;font-weight:500;color:#cfdbe6}
+.links a{position:relative}
+.links a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--amber);transition:width .25s var(--ease)}
+.links a:hover{color:#fff}.links a:hover::after{width:100%}
+.cta{background:var(--amber);color:var(--ink)!important;font-weight:700;padding:.5rem 1.15rem;border-radius:99px;transition:transform .2s}
+.cta:hover{transform:translateY(-2px)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* buttons */
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:99px;font-weight:700;font-size:.93rem;border:2px solid var(--amber);transition:transform .22s var(--ease),box-shadow .22s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px)}
+.p{background:var(--amber);color:var(--ink)}.p:hover{box-shadow:0 10px 24px rgba(224,160,74,.35)}
+.o{color:#fff;border-color:rgba(255,255,255,.4)}.o:hover{background:#fff;color:var(--ink);border-color:#fff}
+.o.dk{color:var(--navy);border-color:var(--navy)}.o.dk:hover{background:var(--navy);color:#fff}
+.s{padding:.55rem 1.2rem;font-size:.84rem}
+.btn i{margin-right:.45rem}
+
+/* hero */
+.hero{padding:10rem 0 6rem;color:#fff;background:
+ linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/48px 48px,
+ linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/48px 48px,
+ radial-gradient(circle at 85% 20%,rgba(107,74,107,.45),transparent 50%),
+ radial-gradient(circle at 5% 90%,rgba(21,154,156,.35),transparent 45%),var(--ink);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:3rem;align-items:center}
+.tag{display:inline-flex;gap:.6rem;align-items:center;font-size:.85rem;font-weight:600;color:var(--mint);border:1px solid rgba(127,224,214,.35);padding:.4rem 1rem;border-radius:99px;margin-bottom:1.2rem}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(127,224,214,0)}0%{box-shadow:0 0 0 0 rgba(127,224,214,.6)}}
+.hero h1{color:#fff;font-size:clamp(3.2rem,9vw,6.4rem);font-weight:900;line-height:.95;letter-spacing:-.04em}
+.hero h1 em{display:block;font-weight:500;color:var(--amber)}
+.hero .line{font-family:Fraunces,serif;font-style:italic;font-size:1.5rem;color:#d9c6e0;margin:1.2rem 0 .9rem}
+.hero .sum{color:#b7c8d8;font-size:1.08rem;max-width:54ch;margin-bottom:1.4rem}
+.avail{
+  display:inline-flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:center;
+  font-size:.85rem;font-weight:600;color:#d5f2ee;
+  background:rgba(127,224,214,.1);border:1px solid rgba(127,224,214,.28);
+  padding:.5rem .9rem;border-radius:10px;margin-bottom:1.6rem;
+}
+.avail span{display:inline-flex;align-items:center;gap:.35rem}
+.avail i{color:var(--mint);font-size:.75rem}
+.avail .sep{width:1px;height:14px;background:rgba(127,224,214,.35)}
+.row{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:1.8rem}
+.soc{display:flex;gap:1.4rem;font-weight:600;font-size:.92rem}
+.soc a{color:#cfdbe6;border-bottom:2px solid rgba(255,255,255,.2);padding-bottom:2px;transition:.2s;display:inline-flex;align-items:center;gap:.4rem}
+.soc a:hover{color:var(--amber);border-color:var(--amber)}
+.load>*{animation:up .8s var(--ease) both}
+.load>*:nth-child(2){animation-delay:.1s}.load>*:nth-child(3){animation-delay:.2s}.load>*:nth-child(4){animation-delay:.3s}.load>*:nth-child(5){animation-delay:.4s}.load>*:nth-child(6){animation-delay:.5s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+
+/* QUICK-PROOF PANEL — trimmed to 3 blocks for first-screen clarity */
+.proof{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;
+  padding:1.5rem 1.4rem 1.3rem;
+  animation:up .9s .3s var(--ease) both;
+}
+.proof .phead{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:.35rem;
+}
+.proof .phead h3{
+  font-family:Inter,sans-serif;font-size:.78rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:#fff;
+}
+.proof .phead a{
+  font-size:.72rem;font-weight:600;color:var(--mint);
+  display:inline-flex;align-items:center;gap:.3rem;
+  transition:color .2s;
+}
+.proof .phead a:hover{color:var(--amber)}
+.proof .psub{
+  font-size:.76rem;color:#8ea3b7;line-height:1.45;
+  margin-bottom:1rem;padding-bottom:.9rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.proof .block{
+  display:block;
+  padding:.9rem .1rem .85rem;
+  border-bottom:1px dashed rgba(255,255,255,.1);
+  transition:background .2s var(--ease);
+  border-radius:8px;
+}
+.proof .block:hover{background:rgba(127,224,214,.05)}
+.proof .block:last-of-type{border-bottom:0}
+.proof .block .bhead{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.6rem;margin-bottom:.55rem;
+}
+.proof .block .bhead .bname{
+  font-family:Inter,sans-serif;
+  font-size:.84rem;font-weight:600;color:#fff;
+  letter-spacing:.01em;line-height:1.25;
+}
+.proof .block .bhead .bgo{
+  display:inline-flex;align-items:center;gap:.3rem;
+  font-size:.7rem;font-weight:600;color:var(--mint);
+  transition:all .2s var(--ease);
+  flex-shrink:0;white-space:nowrap;
+}
+.proof .block:hover .bhead .bgo{color:var(--amber);transform:translateX(2px)}
+.proof .block .bhead .bgo i{font-size:.65rem}
+.proof .block .metrics{
+  display:grid;grid-template-columns:1fr auto;
+  gap:.32rem .8rem;font-size:.78rem;
+  margin-bottom:.55rem;
+}
+.proof .block .metrics .mlabel{color:#a4b8c9;line-height:1.3}
+.proof .block .metrics .mvalue{
+  font-family:Fraunces,serif;font-weight:900;
+  color:#fff;text-align:right;line-height:1.15;
+  letter-spacing:-.01em;white-space:nowrap;
+}
+.proof .block .metrics .mvalue small{
+  font-family:Inter,sans-serif;font-weight:500;
+  font-size:.65rem;color:#9fb4c6;margin-left:.15rem;letter-spacing:0;
+}
+.proof .block .why{
+  font-size:.72rem;line-height:1.45;color:#8ea3b7;
+  font-style:italic;
+  padding-left:.55rem;
+  border-left:2px solid rgba(127,224,214,.4);
+  margin-top:.15rem;
+}
+.proof .pfoot{
+  margin-top:1rem;padding-top:.9rem;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.proof .pfoot .toolkit{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.7rem}
+.proof .pfoot .toolkit span{
+  font-size:.7rem;font-weight:600;color:#d5f2ee;
+  background:rgba(127,224,214,.14);padding:.22rem .65rem;border-radius:99px;
+}
+.proof .pfoot .cta-line{font-size:.74rem;color:#8ea3b7;margin:0}
+.proof .pfoot .cta-line a{
+  color:var(--mint);font-weight:600;
+  border-bottom:1px solid rgba(127,224,214,.4);
+  transition:color .2s,border-color .2s;
+  display:inline-flex;align-items:center;gap:.3rem;
+}
+.proof .pfoot .cta-line a:hover{color:var(--amber);border-color:var(--amber)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3.5rem}
+.about p{font-size:1.06rem;color:var(--muted);margin-bottom:1.1rem}
+.pull{font-family:Fraunces,serif;font-size:1.7rem;line-height:1.3;color:var(--navy);font-weight:500;border-left:5px solid var(--amber);padding-left:1.4rem}
+.pull small{display:block;margin-top:1rem;font-family:Inter;font-size:.9rem;color:var(--teal);font-weight:600}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
+.card{position:relative;overflow:hidden;border-radius:14px;padding:1.8rem;transition:transform .3s var(--ease),box-shadow .3s}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--teal),var(--plum),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.card:hover{transform:translateY(-4px)}.card:hover::before{transform:scaleX(1)}
+
+/* skills */
+.sk{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.sk:hover{background:rgba(255,255,255,.09);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.sk.hl{border-color:var(--amber);background:rgba(224,160,74,.1)}
+.sk h3{font-size:1.08rem;margin-bottom:1rem}
+.sk .note{display:inline-block;font-size:.68rem;font-weight:700;color:var(--ink);background:var(--amber);padding:.1rem .5rem;border-radius:99px;margin-left:.45rem;vertical-align:middle;font-family:Inter}
+.sk .note.soft{background:rgba(127,224,214,.28);color:#0B1B2E}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tags span{font-size:.82rem;font-weight:500;padding:.35rem .85rem;border-radius:99px;background:rgba(255,255,255,.09);color:#e3edf5;transition:.2s}
+.tags span:hover{background:var(--teal);color:#fff}
+
+/* projects — screenshot blocks removed, body flows straight from top */
+.pr{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;padding:0}
+.pr:hover{box-shadow:0 22px 44px rgba(16,36,58,.14)}
+.pr .body{padding:1.8rem 1.8rem 1.8rem;display:flex;flex-direction:column;flex:1}
+.pr .kind{font-size:.8rem;font-weight:700;margin-bottom:.6rem;letter-spacing:.03em}
+.pr:nth-child(1) .kind{color:var(--teal)}.pr:nth-child(2) .kind{color:var(--plum)}.pr:nth-child(3) .kind{color:#b37a2a}.pr:nth-child(4) .kind{color:var(--navy)}
+.pr h3{margin-bottom:.5rem;font-size:1.15rem}
+.pr .d{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.pr li{position:relative;padding-left:1.1rem;font-size:.88rem;margin-bottom:.4rem}
+.pr li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--amber)}
+.met{display:flex;gap:.5rem;flex-wrap:wrap;margin:.9rem 0 0}
+.met b{font-size:.78rem;color:var(--teal);background:rgba(21,154,156,.1);padding:.28rem .75rem;border-radius:99px}
+.stack{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.1rem 0 1.3rem}
+.stack span{font-size:.72rem;font-weight:600;background:var(--cream);color:var(--navy);padding:.2rem .6rem;border-radius:6px}
+.scope{
+  display:block;font-size:.78rem;color:var(--muted);
+  font-style:italic;line-height:1.5;
+  padding:.55rem .75rem;border-radius:8px;
+  background:#f6f8fb;border:1px dashed #d7e0ea;
+  margin:0 0 1rem;
+}
+.scope b{color:var(--navy);font-style:normal;font-weight:600}
+.pr .btn{margin-top:auto;align-self:flex-start}
+.pr .btn i{color:var(--navy);transition:color .2s}
+.pr .btn:hover i{color:#fff}
+
+/* beyond — quiet, neutral */
+.bey{background:var(--cream);padding-top:4rem;padding-bottom:4rem}
+.bey h2{font-size:1.6rem;margin-bottom:.5rem}
+.bey h2::after{display:none}
+.bey .sub{font-size:.98rem;margin-bottom:1.8rem;color:var(--muted)}
+.bc{background:var(--paper);border:1px solid var(--line);padding:1.4rem;border-radius:12px}
+.bc:hover{box-shadow:0 8px 20px rgba(16,36,58,.08)}
+.bc::before{display:none}
+.bc h3{font-size:1rem;margin-bottom:.4rem;font-family:Inter;font-weight:600;color:var(--navy)}
+.bc p{font-size:.88rem;color:var(--muted);line-height:1.55}
+
+/* certifications — TITLES now navy on white (bug fix) */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem}
+.cert{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s}
+.cert:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(16,36,58,.14)}
+.cert::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--teal),var(--plum))}
+.cert h3{color:var(--navy);font-size:1.15rem;margin-bottom:.4rem}
+.cert .org{font-size:.86rem;font-weight:600;color:var(--teal);margin-bottom:.5rem}
+.cert p{font-size:.94rem;color:var(--muted)}
+
+/* education */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.ed{background:var(--paper);border:1px solid var(--line);margin-bottom:1.3rem;border-radius:14px;padding:1.8rem}
+.ed:hover{box-shadow:0 18px 36px rgba(16,36,58,.1)}
+.ed .m{color:var(--teal);font-weight:600;font-size:.9rem;margin:.3rem 0}
+.ed p.s2{color:var(--muted);font-size:.93rem}
+.ed .tags span{background:var(--cream);color:var(--navy);font-size:.75rem}.ed .tags{margin-top:.9rem}
+.col h2{font-size:1.9rem;margin-bottom:1.4rem}
+
+/* leadership */
+.ld{border-left:3px solid var(--amber);padding:.2rem 0 .2rem 1.3rem;margin-bottom:1.7rem;transition:border-color .25s,padding-left .3s var(--ease)}
+.ld:hover{border-color:var(--plum);padding-left:1.7rem}
+.ld h3{font-size:1.1rem;margin-bottom:.4rem}
+.ld li{font-size:.92rem;color:var(--muted);margin-bottom:.25rem}
+
+/* contact */
+.contact{background:var(--ink);color:#fff;border-radius:22px;padding:3.2rem;display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 100%,rgba(21,154,156,.4),transparent 55%),radial-gradient(circle at 0 0,rgba(107,74,107,.45),transparent 45%)}
+.contact>*{position:relative}.contact h2{color:#fff}
+.contact p{color:#b7c8d8}.contact li{margin-bottom:.8rem}
+.contact li a{border-bottom:1px solid rgba(255,255,255,.3);transition:.2s;display:inline-flex;align-items:center;gap:.5rem}
+.contact li a i{font-size:.9rem;color:var(--mint);width:1.1rem;text-align:center}
+.contact li a:hover{color:var(--amber);border-color:var(--amber)}
+.contact .side{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1.4rem}
+.contact .side p{font-family:Fraunces,serif;font-size:1.6rem;color:#fff;line-height:1.3}
+footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.88rem}
+.foot-soc{display:flex;gap:1.2rem;justify-content:center;margin-bottom:.6rem;font-size:1.15rem}
+.foot-soc a{color:var(--navy);transition:color .2s,transform .2s}
+.foot-soc a:hover{color:var(--teal);transform:translateY(-2px)}
+
+@media(max-width:900px){
+.hero .wrap,.about,.two,.contact{grid-template-columns:1fr}
+.hero{padding-top:8rem}
+.burger{display:block}
+.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;padding:1.2rem 1.5rem;gap:1rem}
+.links.open{display:flex}.contact{padding:2rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav">
+  <a class="brand" href="#home">Fiza<b>.</b></a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <ul class="links" id="links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="cta" href="Fiza_Peerkhan_Resume.pdf" download>Resume</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+  <div class="load">
+    <span class="tag"><i></i>Open to Data Analyst and Data Science roles</span>
+    <h1>Fiza <em>Peerkhan</em></h1>
+    <p class="line">Finding the story the data is trying to tell.</p>
+    <p class="sum">Final-year Computer Science (Data Science) student who turns messy data into confident decisions. I build predictive models in Python, query with SQL, and present findings through Power BI and Excel.</p>
+
+    <!-- Availability strip — verify "open to relocation" is true before publishing -->
+    <div class="avail" role="note" aria-label="Availability">
+      <span><i class="fas fa-graduation-cap"></i>Graduating 2027</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span><i class="fas fa-circle-check"></i>Available for internships &amp; full-time roles</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span><i class="fas fa-location-dot"></i>Navi Mumbai</span>
+    </div>
+
+    <div class="row">
+      <a href="#projects" class="btn p"><i class="fas fa-chart-column"></i> View Projects</a>
+      <a href="Fiza_Peerkhan_Resume.pdf" download class="btn o"><i class="fas fa-download"></i> Download Resume</a>
+    </div>
+    <div class="soc">
+      <a href="https://github.com/FizaPeerkhan" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/fiza-peerkhan-222b58289" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:peerkhanfiza04@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </div>
+
+  <!-- QUICK-PROOF PANEL — trimmed to Netflix, Zomato, CGPA only -->
+  <aside class="proof" aria-label="Quick proof — key results grouped by project">
+    <div class="phead">
+      <h3>Quick proof</h3>
+      <a href="#projects">All projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <p class="psub">Key numbers from my main projects. Click any block to jump to that project.</p>
+
+    <a class="block" href="#proj-netflix" aria-label="Jump to Netflix Churn Prediction project">
+      <div class="bhead">
+        <span class="bname">Netflix Churn Prediction</span>
+        <span class="bgo">View project <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="metrics">
+        <span class="mlabel">Model accuracy</span><span class="mvalue">98.6<small>%</small></span>
+        <span class="mlabel">ROC-AUC</span><span class="mvalue">0.997</span>
+        <span class="mlabel">Users modelled</span><span class="mvalue">5,000<small>+</small></span>
+      </div>
+      <p class="why">High AUC means at-risk users are ranked correctly, so retention offers reach the right people.</p>
+    </a>
+
+    <a class="block" href="#proj-zomato" aria-label="Jump to Zomato Ratings Analysis project">
+      <div class="bhead">
+        <span class="bname">Zomato Ratings Analysis</span>
+        <span class="bgo">View project <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="metrics">
+        <span class="mlabel">Records analysed</span><span class="mvalue">10,000<small>+</small></span>
+        <span class="mlabel">Statistical tests used</span><span class="mvalue">3</span>
+      </div>
+      <p class="why">Hypothesis tests show that delivery and table-booking drive ratings, while cost-for-two does not.</p>
+    </a>
+
+    <a class="block" href="#education" aria-label="Jump to Education section">
+      <div class="bhead">
+        <span class="bname">Academic standing</span>
+        <span class="bgo">View education <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="metrics">
+        <span class="mlabel">Current CGPA</span><span class="mvalue">9<small>/10</small></span>
+        <span class="mlabel">NPTEL Python (Data Science)</span><span class="mvalue">Top 1<small>%</small></span>
+      </div>
+      <p class="why">Consistent performance across a heavy Data Science curriculum.</p>
+    </a>
+
+    <div class="pfoot">
+      <div class="toolkit">
+        <span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span><span>Flask</span>
+      </div>
+      <p class="cta-line">
+        <i class="fab fa-github"></i> All source code on
+        <a href="https://github.com/FizaPeerkhan" target="_blank" rel="noopener">GitHub <i class="fas fa-external-link-alt" style="font-size:.6rem"></i></a>
+      </p>
+    </div>
+  </aside>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>Curious by training, analytical by habit.</h2>
+  <p class="sub">Hands-on experience across data analysis, machine learning and full-stack development.</p>
+  <div class="about">
+    <div>
+      <p>I work through the full data workflow: cleaning and exploring datasets, testing hypotheses, building predictive models, and communicating results clearly to non-technical audiences.</p>
+      <p>My toolkit spans Python, SQL, R and C, plus Power BI and Excel for reporting and dashboards. I can build the application around the analysis with Flask or Django. I have led a four-member project team and managed technical content for a student club, so I am comfortable owning outcomes and collaborating to deadlines.</p>
+      <p>I am seeking an entry-level Data Analyst or Data Science role where I can contribute from day one and keep growing.</p>
+    </div>
+    <blockquote class="pull">Ask why, spot the pattern others missed, and follow the evidence until the story makes sense.<small>How I approach every dataset</small></blockquote>
+  </div>
+</div></section>
+
+<section id="skills" class="dark"><div class="wrap">
+  <h2>Technical Skills</h2>
+  <p class="sub">The tools I use to move from raw data to a decision.</p>
+  <div class="grid">
+    <div class="card sk hl"><h3>Business Intelligence &amp; Reporting<span class="note soft">Learning + practice</span></h3><div class="tags"><span>Power BI</span><span>Excel</span><span>Pivot Tables</span><span>Advanced Formulas</span><span>Interactive Dashboards</span></div></div>
+    <div class="card sk"><h3>Programming Languages</h3><div class="tags"><span>Python</span><span>C</span><span>R</span><span>SQL</span></div></div>
+    <div class="card sk"><h3>Data Science &amp; ML</h3><div class="tags"><span>Data Cleaning</span><span>Exploratory Data Analysis</span><span>Data Analysis</span><span>Data Visualization</span><span>Predictive Modeling</span></div></div>
+    <div class="card sk"><h3>Tools &amp; Platforms</h3><div class="tags"><span>Git</span><span>GitHub</span><span>Jupyter Notebook</span><span>Google Colab</span><span>VS Code</span><span>MySQL Workbench</span></div></div>
+    <div class="card sk"><h3>Web Technologies</h3><div class="tags"><span>Flask</span><span>Django</span><span>MySQL</span><span>SQLite</span></div></div>
+    <div class="card sk"><h3>Core Competencies</h3><div class="tags"><span>Business Problem-Solving</span><span>Analytical Thinking</span><span>Project Management</span><span>Team Coordination</span><span>Content Creation</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Featured Projects</h2>
+  <p class="sub">Applied work that pairs analysis with measurable results.</p>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+
+    <article class="card pr" id="proj-netflix">
+      <div class="body">
+        <span class="kind">Machine learning</span>
+        <h3>Netflix Churn Prediction &amp; Recommendation</h3>
+        <p class="d">Predicts which subscribers are likely to leave, segments users, and recommends content to improve retention.</p>
+        <ul><li>Led a team of 4 on a dataset of 5,000+ users</li><li>EDA, feature engineering and model optimization</li><li>Gradient Boosting classifier for churn prediction</li></ul>
+        <div class="met"><b>98.6% accuracy</b><b>0.997 AUC</b></div>
+        <!-- [CONFIRM BEFORE PUBLISHING] Dataset source and train/test split -->
+        <p class="scope"><b>Scope &amp; source:</b> Public Kaggle dataset, academic project. Metrics on a held-out test split. I can walk through the data source, split and model reasoning in an interview.</p>
+        <div class="stack"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Gradient Boosting</span></div>
+        <a class="btn o dk s" href="https://github.com/FizaPeerkhan/Customer-Churn-Analysis" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="card pr" id="proj-zomato">
+      <div class="body">
+        <span class="kind">Statistical analysis</span>
+        <h3>Zomato Ratings Analysis</h3>
+        <p class="d">Identifies which restaurant features genuinely influence customer ratings, using hypothesis testing.</p>
+        <ul><li>Analysed 10,000+ restaurant records</li><li>Applied t-tests, ANOVA and chi-square tests</li><li>Online delivery and table booking significantly improve ratings</li><li>Cost-for-two shows no statistically significant effect</li></ul>
+        <!-- [CONFIRM BEFORE PUBLISHING] Dataset source and significance threshold -->
+        <p class="scope"><b>Scope &amp; source:</b> Public Zomato dataset, academic project. Findings based on hypothesis tests with stated significance thresholds.</p>
+        <div class="stack"><span>Python</span><span>Pandas</span><span>SciPy</span><span>Statistics</span></div>
+        <a class="btn o dk s" href="https://github.com/FizaPeerkhan/Statistical-Analysis-of-Factors-Affecting-Customer-Ratings-of-Restaurants" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="card pr" id="proj-hope">
+      <div class="body">
+        <span class="kind">Full-stack and NLP</span>
+        <h3>HOPE Donation Platform</h3>
+        <p class="d">Connects donors with verified NGOs and answers questions through an NLP chatbot.</p>
+        <ul><li>Matches donors to NGOs by cause and location</li><li>Donation tracking and NGO verification</li><li>Chatbot built with TF-IDF and Naive Bayes</li></ul>
+        <!-- [CONFIRM BEFORE PUBLISHING] Chatbot training set scope -->
+        <p class="scope"><b>Scope &amp; source:</b> Academic full-stack project. Chatbot trained on a small curated question set, designed as a demo of the NLP workflow rather than a production assistant.</p>
+        <div class="stack"><span>Django</span><span>SQLite</span><span>JavaScript</span><span>NLP</span></div>
+        <a class="btn o dk s" href="https://github.com/FizaPeerkhan/HOPE-Donation-Website-Project" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="card pr" id="proj-safeplate">
+      <div class="body">
+        <span class="kind">Computer vision and web</span>
+        <h3>SafePlate Food Safety Platform</h3>
+        <p class="d">Reads product labels and flags ingredient risks, including disease-specific alerts.</p>
+        <ul><li>OCR-based ingredient extraction</li><li>Database of 202 products and 462 ingredients</li><li>Risk classification with rule-based recommendations</li><li>Disease-specific alerts for specific health conditions</li></ul>
+        <!-- [CONFIRM BEFORE PUBLISHING] Database curation and classification method -->
+        <p class="scope"><b>Scope &amp; source:</b> Academic project. Ingredient database is manually curated; risk rules are rule-based, not a trained classifier.</p>
+        <div class="stack"><span>Python</span><span>OCR</span><span>Flask</span><span>SQLite</span></div>
+        <a class="btn o dk s" href="https://github.com/FizaPeerkhan/Food-Safety-and-Transparency-Platform" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section id="certifications" class="dark"><div class="wrap">
+  <h2>Certifications</h2>
+  <p class="sub">Formal recognition of core data science foundations.</p>
+  <div class="cert-grid">
+    <div class="cert"><h3>Python for Data Science</h3><p class="org">NPTEL · Elite Certification</p><p>Ranked in the top 1% of all candidates.</p></div>
+    <div class="cert"><h3>Machine Learning: Coursework</h3><p class="org">MITx MicroMasters Program</p><p>Completed coursework in machine learning foundations and applications as part of the MicroMasters programme.</p></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <p class="sub">Academic foundation in computer science and data science.</p>
+  <div class="two">
+    <div class="ed"><h3>B.E. Computer Science &amp; Engineering (Data Science)</h3><p class="m">Anjuman-I-Islam's Kalsekar Technical Campus, Panvel</p><p class="s2">2023 to 2027 (expected) · CGPA 8.88 / 10</p><div class="tags"><span>DBMS</span><span>Machine Learning</span><span>Statistics</span><span>Data Warehousing</span><span>Data Visualization</span><span>Web Technologies</span></div></div>
+    <div class="ed"><h3>Higher Secondary Certificate (Science)</h3><p class="m">A.E. Kalsekar Junior College, Rajapur, Ratnagiri</p><p class="s2">2023 · 84.83% · College Rank 2</p></div>
+  </div>
+</div></section>
+
+<section id="leadership" style="background:var(--cream)"><div class="wrap">
+  <h2>Leadership &amp; Activities</h2>
+  <p class="sub">Roles where I have owned outcomes beyond the classroom.</p>
+  <div class="grid">
+    <!-- [CONFIRM] Club and council names should match resume exactly -->
+    <div class="ld"><h3>Media Head · DataNexus Club (S4DS)</h3><ul><li>Managed social media strategy for the club</li><li>Created technical content for workshops and events</li><li>Promoted speaker sessions and college events</li><li>Strengthened the club's digital presence</li></ul></div>
+    <div class="ld"><h3>Internship Coordinator · IIC Student Council</h3><ul><li>Coordinated and secured internship opportunities with startups and incubators</li><li>Exposed students to the entrepreneurial ecosystem</li></ul></div>
+    <div class="ld"><h3>NSS Volunteer</h3><ul><li>Participated in social initiatives and awareness rallies</li><li>Contributed to plantation drives and community activities</li></ul></div>
+  </div>
+</div></section>
+
+<section id="beyond" class="bey"><div class="wrap">
+  <h2>A little beyond the data</h2>
+  <p class="sub">Interests that keep me curious and grounded.</p>
+  <div class="grid">
+    <div class="card bc"><h3>Psychological thrillers</h3><p>I enjoy stories with unreliable narrators and slow reveals. They are good practice for reading between the lines in a dataset.</p></div>
+    <div class="card bc"><h3>Mystery &amp; horror series</h3><p>Following a plot from clue to reveal is a lot like structured investigation. I like asking why each piece is there.</p></div>
+    <div class="card bc"><h3>Sitcoms</h3><p>Ensemble comedy is a masterclass in how teams work well together when they trust each other.</p></div>
+    <div class="card bc"><h3>Crochet</h3><p>One careful stitch at a time. It builds patience and precision, which carry straight into feature engineering.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap"><div class="contact">
+  <div><h2>Let's work together</h2><p>Available for internships and entry-level roles in Data Analytics and Data Science.</p>
+    <ul style="margin-top:1.5rem">
+      <li><a href="mailto:peerkhanfiza04@gmail.com"><i class="fas fa-envelope"></i>peerkhanfiza04@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/fiza-peerkhan-222b58289" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>linkedin.com/in/fiza-peerkhan</a></li>
+      <li><a href="https://github.com/FizaPeerkhan" target="_blank" rel="noopener"><i class="fab fa-github"></i>github.com/FizaPeerkhan</a></li>
+      <li><i class="fas fa-location-dot" style="color:var(--mint);width:1.1rem;text-align:center;margin-right:.5rem"></i>Navi Mumbai, Maharashtra, India</li>
+    </ul></div>
+  <div class="side"><p>Have a role or project in mind? Let's talk data.</p><a class="btn p" href="mailto:peerkhanfiza04@gmail.com"><i class="fas fa-paper-plane"></i> Send an email</a></div>
+</div></div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-soc">
+      <a href="https://github.com/FizaPeerkhan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/fiza-peerkhan-222b58289" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:peerkhanfiza04@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    &copy; 2026 Fiza Peerkhan
+  </div>
+</footer>
+
+<script>
+const b=document.getElementById('burger'),l=document.getElementById('links');
+b.addEventListener('click',()=>{const o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+</script>
+</body>
+</html>
