@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#0B1B2E;--navy:#10243A;--teal:#159A9C;--mint:#7FE0D6;--plum:#6B4A6B;--amber:#E0A04A;--cream:#FBF7EE;--paper:#fff;--text:#253247;--muted:#51627a;--line:#E4E8EE;--ease:cubic-bezier(.2,.7,.2,1)}
@@ -276,6 +277,50 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.88rem}
 .links.open{display:flex}.contact{padding:2rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+/* =========================================
+   MOBILE UX FIX: Prevent endless scrolling
+   ========================================= */
+@media(max-width: 768px) {
+  /* 1. Reduce massive section spacing */
+  section { padding: 2.5rem 0 !important; }
+  .hero { padding: 7rem 0 2rem 0 !important; }
+  
+  /* 2. Tighten up the Hero and Quick Proof */
+  .hero h1 { font-size: 2.8rem; }
+  .hero .line { font-size: 1.2rem; margin: 0.8rem 0; }
+  .avail { font-size: 0.75rem; padding: 0.4rem 0.6rem; gap: 0.4rem; }
+  .avail .sep { display: none; } /* Hide separators to save space */
+  .proof { padding: 1rem 0.8rem; margin-top: 1rem; }
+  
+  /* 3. Make grids single-column (stacks cards vertically) */
+  .grid, .skills-categories, .cert-grid, .projects-grid, .two, .about-grid, .beyond-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* 4. Compress project cards */
+  .pr .body { padding: 1.2rem; }
+  .pr h3 { font-size: 1.05rem; }
+  .pr .d { font-size: 0.85rem; margin-bottom: 0.8rem; }
+  .pr ul { padding-left: 1rem; }
+  .pr li { font-size: 0.82rem; }
+  .scope { font-size: 0.75rem; padding: 0.5rem; }
+  
+  /* 5. Compress Education and Certs */
+  .ed, .cert { padding: 1.2rem; margin-bottom: 1rem; }
+  
+  /* 6. Compress Contact */
+  .contact { padding: 1.5rem 1rem; border-radius: 12px; }
+  .contact .side p { font-size: 1.3rem; }
+  
+  /* 7. Make the mobile menu feel more premium */
+  .links.open { 
+    padding: 1rem; 
+    gap: 0.8rem; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .links a { font-size: 0.95rem; width: 100%; display: block; }
+}
 </style>
 </head>
 <body>
